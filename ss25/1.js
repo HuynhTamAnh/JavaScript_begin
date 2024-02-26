@@ -1,5 +1,5 @@
 
-const number = parseInt(process.argv[2]);
+const number = Number(prompt('nhập số nguyên dương:'));
 
 
 if (isNaN(number) || number <= 0) {

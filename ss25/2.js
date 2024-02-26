@@ -1,6 +1,6 @@
 
-const a = parseInt(process.argv[2]);
-const b = parseInt(process.argv[3]);
+const a = Number(prompt('nhập số nguyên dương a:'));
+const b = Number(prompt('nhập số nguyên dương b:'));
 
 
 if (isNaN(a) || isNaN(b)) {
