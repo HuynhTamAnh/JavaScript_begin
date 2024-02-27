@@ -1,7 +1,7 @@
 var n = Number(prompt('Nhập vào số nguyên dương:'));
 
 if (isNaN(n) || n <= 0 || n % 1 !== 0) {
-    console.log("Vui lòng nhập một số nguyên dương hợp lệ.");
+    console.log("nhập một số nguyên dương bạn ơiiiii.");
 } else {
     var soDao = 0;
     var soNhap = n;
