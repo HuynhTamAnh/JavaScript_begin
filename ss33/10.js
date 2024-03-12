@@ -36,7 +36,7 @@ function addProduct() {
     products.push(product);
     console.log('Sản phẩm đã được thêm vào cửa hàng');
 }
-  
+
 function addEmployee() {
     let id = employees.length + 1;
     let name = prompt('Nhập tên nhân viên:');
