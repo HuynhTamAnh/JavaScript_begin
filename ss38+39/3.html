@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Image</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  #background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/354236403_1308926329986401_3123762949338173527_n.jpg) no-repeat center center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 2s;
+  }
+  #loading-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<div id="background-image"></div>
+<div id="loading-percentage">0%</div>
+
+<script>
+  window.onload = function() {
+    var backgroundImage = document.getElementById('background-image');
+    var loadingText = document.getElementById('loading-percentage');
+    var percentage = 0;
+    var interval = setInterval(function() {
+      percentage++;
+      loadingText.textContent = percentage + '%';
+      backgroundImage.style.opacity = percentage / 100;
+      if (percentage >= 100) {
+        clearInterval(interval);
+        loadingText.style.display = 'none';
+      }
+    }, 30); // Điều chỉnh tốc độ tăng phần trăm ở đây
+  };
+</script>
+
+</body>
+</html>

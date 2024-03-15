@@ -1,0 +1,27 @@
+.search-bar {
+    width: 35px;
+    transition: width 0.5s ease-in-out;
+    position: relative; /* Thay đổi từ absolute sang relative */
+    display: flex;
+    align-items: center; /* Căn chỉnh nội dung theo chiều dọc */
+}
+
+.search-bar input {
+    border: none; /* Xóa viền */
+    padding: 8px; /* Thêm khoảng trắng nội dung để không nằm sát lề */
+    width: 100%; /* Tự động mở rộng input */
+    box-sizing: border-box; /* Bao gồm cả padding và border trong kích thước */
+    border-color: black;
+    background-color: blueviolet;
+    border-radius: 25px;
+    text-decoration-color: black;
+}
+
+.search-bar:hover {
+    width: 200px;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 5px;
+}

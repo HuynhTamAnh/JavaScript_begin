@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <style>
+        .search-bar {
+            width: 35px;
+            transition: width 0.5s ease-in-out;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+    
+        .search-bar input {
+            border: none;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: blueviolet;
+            border-radius: 25px;
+            color: black; /* Ensure text is always visible */
+        }
+    
+        .search-bar:hover,
+        .search-bar:focus-within { /* Apply the same styles when the container is focused */
+            width: 200px;
+        }
+    
+        .search-bar i {
+            position: absolute;
+            right: 10px;
+            cursor: pointer; /* Change mouse pointer to indicate clickable item */
+        }
+</style>
+
+</head>
+<body>
+<!-- HTML -->
+<div class="search-bar">
+    <input type="text" id="searchBar" placeholder="">
+    <i class="fa fa-search" id="act"></i>
+</div>
+
+
+    <script>
+        let searchBar = document.getElementById('searchBar');
+let act = document.getElementById('act');
+
+searchBar.addEventListener('click', function() {
+    searchBar.parentElement.style.width = '200px';
+    searchBar.placeholder = 'Search...';
+    searchBar.style.color='black';
+});
+
+searchBar.addEventListener('blur', function() {
+    searchBar.parentElement.style.width = '50px';
+    searchBar.placeholder = '';
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Step Interface</title>
+<style>
+  .step-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .step {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+</style>
+</head>
+<body>
+
+<div class="step-container">
+  <div id="step1" class="step">1</div>
+  <div id="step2" class="step">2</div>
+  <div id="step3" class="step">3</div>
+  <div id="step4" class="step">4</div>
+</div>
+
+<button id="prev" disabled>Prev</button>
+<button id="next">Next</button>
+
+<script src="1.js">
+</script>
+
+</body>
+</html>
